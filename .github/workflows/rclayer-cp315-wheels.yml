@@ -23,7 +23,7 @@ jobs:
             linux_arch: aarch64
             macos_arch: ''
             windows_arch: ''
-          - os: macos-14
+          - os: macos-15
             linux_arch: ''
             macos_arch: arm64
             windows_arch: ''
