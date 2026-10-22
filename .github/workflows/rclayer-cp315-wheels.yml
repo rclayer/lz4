@@ -45,7 +45,7 @@ jobs:
           CIBW_ARCHS_LINUX: ${{ matrix.linux_arch }}
           CIBW_ARCHS_MACOS: ${{ matrix.macos_arch }}
           CIBW_ARCHS_WINDOWS: ${{ matrix.windows_arch }}
-          CIBW_ENVIRONMENT: SETUPTOOLS_SCM_PRETEND_VERSION=4.4.5
+          CIBW_ENVIRONMENT: SETUPTOOLS_SCM_PRETEND_VERSION=4.4.5 PYLZ4_USE_SYSTEM_LZ4=False
           CIBW_TEST_COMMAND: python -c "import lz4.frame; data = bytes([119]); assert lz4.frame.decompress(lz4.frame.compress(data)) == data"
           CIBW_BUILD_VERBOSITY: '1'
       - uses: actions/upload-artifact@v4
